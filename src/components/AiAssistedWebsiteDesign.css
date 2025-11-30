@@ -1,0 +1,224 @@
+.react-tailwind-section {
+  width: 80vw;
+  min-height: 70vh;
+  margin: 0;
+  padding: 0;
+  background: #f9fafb; /* Tailwind bg-gray-50 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.react-tailwind-section .content {
+  display: flex;
+  flex-direction: column; /* stacked on mobile */
+  width: 100%;
+  max-width: 1200px; /* optional container limit */
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .react-tailwind-section .content {
+    flex-direction: row; /* side-by-side on desktop */
+    gap: 2rem;          /* spacing between text & image */
+  }
+}
+
+.react-tailwind-section .text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .react-tailwind-section .text-side {
+    margin-bottom: 0;
+  }
+}
+
+.react-tailwind-section .image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-tailwind-section .image-side img {
+  width: 100%;             /* fills container width */
+  max-width: 500px;        /* optional max width */
+  aspect-ratio: 4 / 3;     /* keeps rectangular shape */
+  object-fit: cover;       /* fills rectangle without stretching */
+  border-radius: 16px;     /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* subtle shadow */
+}
+
+
+
+.benefits-section {
+  width: 80vw;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #e8e7e4; /* light yellow for distinction */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   /* optional rounded corners */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+.benefits-section .content {
+  display: flex;
+  flex-direction: column; /* stacked on mobile */
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .benefits-section .content {
+    flex-direction: row; /* side-by-side on desktop */
+    gap: 2rem;
+  }
+}
+
+/* Benefits Section */
+.benefits-section {
+  width: 80vw;
+  min-height: 60vh;
+  margin: 2rem auto; /* gives space above and below */
+  padding: 2rem;
+  background: #ece8d9; /* light yellow for distinction */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Content inside Benefits Section */
+.benefits-section .content {
+  display: flex;
+  flex-direction: column; /* stack on mobile */
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .benefits-section .content {
+    flex-direction: row; /* side by side on desktop */
+  }
+}
+
+
+@media (min-width: 768px) {
+  .benefits-section .image-side {
+    margin-bottom: 0;
+  }
+}
+
+/* Right: Text side */
+.benefits-section .text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Image styling */
+.benefits-section .image-side img {
+  width: 100%;               /* fills container width */
+  max-width: 700px;          /* desktop max width, same as React + Tailwind */
+  height: 270px;             /* desktop height */
+  aspect-ratio: 4 / 3;       /* keeps rectangular shape */
+  object-fit: cover;         /* fills rectangle without stretching */
+  border-radius: 16px;       /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* subtle shadow */
+}
+
+/* Mobile adjustment */
+@media (max-width: 767px) {
+  .benefits-section .image-side img {
+    max-width: 360px;  /* same as first section on mobile */
+    height: 280px;
+  }
+}
+.fully-responsive-section {
+  width: 100%;           /* full width */
+  background: #f9fafb;   /* same light gray */
+  padding: 80px 20px;    /* internal padding */
+  text-align: center;
+}
+
+.fully-responsive-section .container-full {
+  max-width: 1400px;     /* container limit */
+  margin: 0 auto;
+}
+
+.fully-responsive-section .section-title {
+  font-size: 2.5rem;
+  color: #1d4ed8;        /* blue-800 */
+  margin-bottom: 20px;
+}
+
+.fully-responsive-section .section-description {
+  font-size: 1.125rem;
+  color: #374151;        /* gray-700 */
+  margin-bottom: 60px;
+}
+
+.fully-responsive-section .section-subtitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;        /* gray-900 */
+  margin-bottom: 40px;
+}
+
+.fully-responsive-section .features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .fully-responsive-section .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-card:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.feature-desc {
+  font-size: 1rem;
+  color: #4b5563; /* gray-600 */
+}
+

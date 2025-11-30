@@ -1,0 +1,120 @@
+
+
+
+/* -------------------- FEATURES & PROCESS SECTION -------------------- */
+.feature-card,
+.process-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+}
+
+.feature-card:hover,
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradients for feature cards */
+.gradient-blue {
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.gradient-gray {
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+}
+
+/* -------------------- PORTFOLIO SECTION -------------------- */
+.portfolio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.portfolio-card img {
+  object-fit: cover;
+  height: 12rem; /* 48 Tailwind units */
+  width: 100%;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional hover overlay for project title */
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* -------------------- TESTIMONIALS SECTION -------------------- */
+.client-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.client-card img {
+  border-radius: 50%;
+  width: 4rem; /* 16 Tailwind units */
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------------- CALL TO ACTION SECTION -------------------- */
+.cta-section {
+  text-align: center;
+  background: #eff6ff; /* Tailwind blue-50 */
+  padding: 4rem 1rem;
+}
+
+/* CTA Heading */
+.cta-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cta-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-section h2 {
+    font-size: 3rem;
+  }
+}
+
+/* CTA Paragraph */
+.cta-section p {
+  color: #374151; /* Tailwind gray-700 */
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
