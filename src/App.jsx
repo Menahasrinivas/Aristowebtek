@@ -54,7 +54,7 @@ function ImgWithPrompt({ src, alt, prompt, className = "" }) {
 export default function App() {
   return (
     <HelmetProvider>
-      <BrowserRouter basename="/aristo">
+      <BrowserRouter basename="/">
         <div className="min-h-screen bg-white text-slate-900">
           <Navbar />
           <StickyCTA />
